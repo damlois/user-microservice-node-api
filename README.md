@@ -39,4 +39,4 @@ This project is licensed under the MIT license
 | for admin, get user by email [get]              | /user_email           |[route] - email & [query] - token                    |
 | for admin, update [patch]                       | /update               |[route param] - id & [query]-token                   |
 | for admin, delete by id [delete]                | /delete               |[route param] - id & [query]-token                   |
-| for admin, activate or deactivate user [patch]  | /update_status        |[route] - email, [query] - token  &                  |                                                                                     |                                                 |                       |action(activate or deactivate)                       | 
+| for admin, activate or deactivate user [patch]  | /update_status        |[route] - email, [query] - token  &                  |                                                                                     |               ..                                |                       |action(activate or deactivate)                       | 
