@@ -27,15 +27,16 @@ Lois Adegbohungbe
 This project is licensed under the MIT license
 
 ## Routes
-|                   NAME                                      |   ENDPOINT            |
-| ------------------------------------------------------------| ----------------------|
-| base [get]                                                  | /                |
-| user sign up [post]                                         | /signup               |
-| user sign in [get]                                          | /signin               |
-| for admin, authenticate [get]                               | /authenticate         |
-| for admin, get all users [get]                              | /users                |
-| for admin, get user by id [get]                             | /user_id/:id          |
-| for admin, get user by email [get]                          | /user_emaail/:email   |
-| for admin, update [patch]                                   | /update/:id           |
-| for admin, delete by id [delete]                            | /delete/:id           |
-| for admin, activate or deactivate user [patch]              | /update_status/:email |
+|                   NAME                          |   ENDPOINT            |              PARAMS                                 |
+| ------------------------------------------------| ----------------------|-----------------------------------------------------|
+| base [get]                                      | /                     |           NONE                                      |
+| user sign up [post]                             | /signup               |body.{name, age, email, admin: true(for only admins) |    
+| user sign in [get]                              | /signin               |[query param] - email                                |                     
+| authenticate [get] admins get token to access   | /authenticate         |[query param] - email                                |                
+| other endpoint from here                        |                       |                                                     |
+| for admin, get all users [get]                  | /users                |[query param] - token                                |
+| for admin, get user by id [get]                 | /user_id              |[route param] - id & [query] - token                 |
+| for admin, get user by email [get]              | /user_email           |[route] - email & [query] - token                    |
+| for admin, update [patch]                       | /update               |[route param] - id & [query]-token                   |
+| for admin, delete by id [delete]                | /delete               |[route param] - id & [query]-token                   |
+| for admin, activate or deactivate user [patch]  | /update_status        |[route] - email, [query] - token  &                  |                                                                                     |                                                 |                       |action(activate or deactivate)                       | 
